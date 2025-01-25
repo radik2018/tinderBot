@@ -8,9 +8,9 @@ import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 import java.util.ArrayList;
 
 public class TinderBoltApp extends MultiSessionTelegramBot {
-    public static final String TELEGRAM_BOT_NAME = "AITinderTest_bot"; //TODO: добавь имя бота в кавычках
-    public static final String TELEGRAM_BOT_TOKEN = "7745800404:AAHEa2pk4FkR1fKi-zwWt9PozohIUVCiYl4"; //TODO: добавь токен бота в кавычках
-    public static final String OPEN_AI_TOKEN = "gpt:6MZuruLWYMt7BFAYy33hJFkblB3TrOQSkF7WUgsEFs26dToB"; //TODO: добавь токен ChatGPT в кавычках
+    public static final String TELEGRAM_BOT_NAME = "#######"; //TODO: добавь имя бота в кавычках
+    public static final String TELEGRAM_BOT_TOKEN = "######"; //TODO: добавь токен бота в кавычках
+    public static final String OPEN_AI_TOKEN = "########"; //TODO: добавь токен ChatGPT в кавычках
 
     private ChatGPTService chatGPT = new ChatGPTService(OPEN_AI_TOKEN);
     private DialogMode currentMode = null;
@@ -212,14 +212,6 @@ public class TinderBoltApp extends MultiSessionTelegramBot {
             }
             return;
         }
-
-        sendTextMessage("*Привет!*");
-        sendTextMessage("_Привет!_");
-
-        sendTextButtonsMessage("Выберите режим работы: ",
-                "Старт", "start",
-                "Стоп", "stop");
-
     }
 
     public static void main(String[] args) throws TelegramApiException {
